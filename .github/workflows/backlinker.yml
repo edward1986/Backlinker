@@ -3,7 +3,9 @@ name: Run Backlinker Script
 on:
   push:
     branches:
-      - main  # or change to your branch name (e.g., master, develop)
+      - master  # or change to your branch name
+
+  workflow_dispatch: # This allows manual trigger from GitHub UI
 
 jobs:
   run-backlinker:
@@ -16,7 +18,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.x'  # Or your required version
+        python-version: '3.x'
 
     - name: Install dependencies
       run: |
