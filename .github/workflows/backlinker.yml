@@ -1,11 +1,12 @@
 name: Run Backlinker Script
 
 on:
+  schedule:
+    - cron: '0 4 * * *'   # 4:00 AM UTC
+  workflow_dispatch:       # still allow manual trigger
   push:
     branches:
       - master  # or change to your branch name
-
-  workflow_dispatch: # This allows manual trigger from GitHub UI
 
 jobs:
   run-backlinker:
