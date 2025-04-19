@@ -26,7 +26,7 @@ def main():
             data = json.load(file)
 
             for backlink in data:
-                url = backlink['url'].replace("h4link.duckdns.org", site)
+                url = backlink['url'].replace("multiculturaltoolbox.com", site)
 
                 try:
                     response = requests.get(url, timeout=5)  # Added timeout for safety
